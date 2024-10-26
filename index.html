@@ -1,37 +1,169 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="index.css">
-    <title>《月》</title>
-   
-</head>
-<body>
+    <title>zhiyog | 若^</title>
+    <link rel="stylesheet" href="./index.css">
 
-    <div class="container">
-        <h1>《月》</h1>
-        <button class="start-btn" onclick="startGame()">开始新游戏</button>
-        <button class="load-btn" onclick="loadGame()">读取存档</button>
-        <p class="credits">开发者：若^/zhiyog</p>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- 在网页中引入了 Roboto 字体的不同权重（400 表示常规体，700 表示加粗体）-->
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav">
+            <a href="#zhiyog" class="zhiyog-link">zhiyog</a>
+            <a href="#code" >Code</a>
+            <a href="#project" >Project</a>
+            <a href="#statistics">Statistics</a>
+            <a href="#fun">Fun</a>
+            <a href="#book" >Book</a>
+            <a href="#comments" >Comments</a>
+            
+            <div class="logo">
+                <a href="https://github.com/zhiyog" target="_blank" title="GitHub">
+                    <svg class="icon" style="gap: 10px;" t="1726650911648" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6181" width="200" height="200"><path d="M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 0 0 363.52 938.666667c23.466667 4.266667 32-9.813333 32-22.186667v-78.08c-130.56 27.733333-158.293333-61.44-158.293333-61.44a122.026667 122.026667 0 0 0-52.053334-67.413333c-42.666667-28.16 3.413333-27.733333 3.413334-27.733334a98.56 98.56 0 0 1 71.68 47.36 101.12 101.12 0 0 0 136.533333 37.973334 99.413333 99.413333 0 0 1 29.866667-61.44c-104.106667-11.52-213.333333-50.773333-213.333334-226.986667a177.066667 177.066667 0 0 1 47.36-124.16 161.28 161.28 0 0 1 4.693334-121.173333s39.68-12.373333 128 46.933333a455.68 455.68 0 0 1 234.666666 0c89.6-59.306667 128-46.933333 128-46.933333a161.28 161.28 0 0 1 4.693334 121.173333A177.066667 177.066667 0 0 1 810.666667 477.866667c0 176.64-110.08 215.466667-213.333334 226.986666a106.666667 106.666667 0 0 1 32 85.333334v125.866666c0 14.933333 8.533333 26.88 32 22.186667A460.8 460.8 0 0 0 981.333333 502.186667 464.64 464.64 0 0 0 512 42.666667" fill="#231F20" p-id="6182"></path></svg>
+                </a>
+                <a href="https://space.bilibili.com/3546746441436016" target="_blank" title="Bilibili">
+                    <svg class="icon" style="gap: 10px;" t="1726652040334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9323" width="200" height="200"><path d="M777.514667 131.669333a53.333333 53.333333 0 0 1 0 75.434667L728.746667 255.829333h49.92A160 160 0 0 1 938.666667 415.872v320a160 160 0 0 1-160 160H245.333333A160 160 0 0 1 85.333333 735.872v-320a160 160 0 0 1 160-160h49.749334L246.4 207.146667a53.333333 53.333333 0 1 1 75.392-75.434667l113.152 113.152c3.370667 3.370667 6.186667 7.04 8.448 10.965333h137.088c2.261333-3.925333 5.12-7.68 8.490667-11.008l113.109333-113.152a53.333333 53.333333 0 0 1 75.434667 0z m1.152 231.253334H245.333333a53.333333 53.333333 0 0 0-53.205333 49.365333l-0.128 4.010667v320c0 28.117333 21.76 51.157333 49.365333 53.162666l3.968 0.170667h533.333334a53.333333 53.333333 0 0 0 53.205333-49.365333l0.128-3.968v-320c0-29.44-23.893333-53.333333-53.333333-53.333334z m-426.666667 106.666666c29.44 0 53.333333 23.893333 53.333333 53.333334v53.333333a53.333333 53.333333 0 1 1-106.666666 0v-53.333333c0-29.44 23.893333-53.333333 53.333333-53.333334z m320 0c29.44 0 53.333333 23.893333 53.333333 53.333334v53.333333a53.333333 53.333333 0 1 1-106.666666 0v-53.333333c0-29.44 23.893333-53.333333 53.333333-53.333334z" p-id="9324"></path></svg>
+                </a>
+                <a href="https://www.douyin.com/user/self?from_tab_name=main&showTab=post" target="_blank" title="Tiktok"">
+                    <svg class="icon" style="gap: 10px;" t="1726652222618" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11123" width="200" height="200"><path d="M384 853.333333a42.666667 42.666667 0 0 1 0 85.333334H341.333333a256 256 0 0 1-256-256v-42.666667a42.666667 42.666667 0 0 1 85.333334 0v42.666667a170.666667 170.666667 0 0 0 170.666666 170.666666h42.666667z m-213.333333-341.333333a42.666667 42.666667 0 0 1-85.333334 0V341.333333a256 256 0 0 1 256-256h341.333334a256 256 0 0 1 256 256v341.333334a256 256 0 0 1-256 256h-170.666667a42.666667 42.666667 0 0 1 0-85.333334h170.666667a170.666667 170.666667 0 0 0 170.666666-170.666666V341.333333a170.666667 170.666667 0 0 0-170.666666-170.666666H341.333333a170.666667 170.666667 0 0 0-170.666666 170.666666v170.666667z m426.666666-213.333333a85.333333 85.333333 0 0 0 85.333334 85.333333h25.6c9.386667 0 17.066667 7.68 17.066666 17.066667v51.2a17.066667 17.066667 0 0 1-17.066666 17.066666H682.666667a169.898667 169.898667 0 0 1-85.333334-22.826666V618.666667a149.333333 149.333333 0 1 1-149.333333-149.333334h4.266667c9.386667 0 17.066667 7.68 17.066666 17.066667v51.2a17.066667 17.066667 0 0 1-17.066666 17.066667h-4.266667a64 64 0 1 0 64 64V273.066667c0-9.386667 7.68-17.066667 17.066667-17.066667h51.2c9.386667 0 17.066667 7.68 17.066666 17.066667V298.666667z" fill="#31303D" p-id="11124"></path></svg>
+                </a>
+                <a href="https://blog.csdn.net/2201_75317009?spm=1010.2135.3001.5343" target="_blank" title="csdn">
+                    <svg class="icon" style="gap: 10px;" t="1726652387966" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13690" width="200" height="200"><path d="M512 0c282.784 0 512 229.216 512 512s-229.216 512-512 512S0 794.784 0 512 229.216 0 512 0z m189.952 752l11.2-108.224c-31.904 9.536-100.928 16.128-147.712 16.128-134.464 0-205.728-47.296-195.328-146.304 11.584-110.688 113.152-145.696 232.64-145.696 54.784 0 122.432 8.8 151.296 18.336L768 272.704C724.544 262.24 678.272 256 599.584 256c-203.2 0-388.704 94.88-406.4 263.488C178.336 660.96 303.584 768 535.616 768c80.672 0 138.464-6.432 166.336-16z" fill="#333333" p-id="13691"></path></svg>
+                </a>
+                                              
+            </div>
+        </div>
+     
     </div>
 
-    <script>
-        function startGame() {
-            localStorage.removeItem("saveState"); // 清除之前的存档
-            window.location.href = "game.html"; // 跳转到游戏页面
-        }
+    <div class="container">
+        <!-- 个人介绍 -->
+        <section id = "zhiyog" class="zhiyog">           
+            <ul class="personal-conclusion" style="list-style-type: none;">
+                <h1>zhiyog</h1>
+                <li>Central South University</li>
+                <li>Full Stack Developer</li>
+                <li>Gaming Enthusiast</li>
+                <li>Golang Developer</li>  
+                <li>Web Developer</li>                 
+            </ul>
 
-        function loadGame() {
-            let saveState = localStorage.getItem("saveState");
-            if (saveState) {
-                window.location.href = "game.html"; // 读取存档，进入游戏
-            } else {
-                alert("没有找到存档，请开始新游戏。");
-            }
-        }
-    </script>
+            <div class="water-box">
+                <div class="content">
+                    <p >
+                        Thank you for visiting my website showcasing my programming journey.
+                        <br><br>
+                        I love connecting with people from different backgrounds.
+                        <br><br>
+                        Feel free to reach out if you're a fellow developer or from any other field.
+                    </p>
+                    
+                </div>
+                <a class="welcome">hello</a>
+                <a class="hello">welcome</a>
+            </div>
 
+        </section>
+
+        <!-- 代码展示 -->
+        <section id="code" class="Code">
+            <a href="https://smms.app/image/A5b4dywrUOWCmHo" target="_blank"><img src="https://s2.loli.net/2024/09/26/A5b4dywrUOWCmHo.jpg" ></a>
+            <div class="card1">
+
+                <div class="card" data-original-text="HTML" data-text="HTML is easy to learn, but it's pretty useful, which can help me build my web struct." onmouseover="changeText(this)" onmouseout="resetText(this)">
+                    <span class="card-text">HTML</span>
+                </div>
+                <div class="card" data-original-text="CSS" data-text="CSS is a powerful tool for styling beautiful web pages, and you need to practice more to be familiar." onmouseover="changeText(this)" onmouseout="resetText(this)">
+                    <span class="card-text">CSS</span>
+                </div>
+                <div class="card" data-original-text="JavaScript" data-text="JavaScript is a concise language focused on web interaction. I use it to enhance my website logic." onmouseover="changeText(this)" onmouseout="resetText(this)">
+                    <span class="card-text">JavaScript</span>
+                </div>
+                <div class="card" data-original-text="Vue3" data-text="Vue3 is a powerful version of Vue, and I'm still learning it to build more web applications." onmouseover="changeText(this)" onmouseout="resetText(this)">
+                    <span class="card-text">Vue3</span>
+                </div>
+                <div class="card" data-original-text="Golang" data-text="It's a promising performance language, which is focusing on cloud native. I'm trying to make it more primary in my coding career." onmouseover="changeText(this)" onmouseout="resetText(this)">
+                    <span class="card-text">Golang</span>
+                </div>
+            </div>
+
+            <div class="card2">
+
+                <div class="card" data-original-text="C++" data-text=" I mainly use C++ to practice algorithms on websites like LeetCode." onmouseover="changeText(this)" onmouseout="resetText(this)">
+                    <span class="card-text">C++</span>
+                </div>
+                <div class="card" data-original-text="Python" data-text="I use Python for data processing and solve simple needs, recently applied to mathematical modeling algorithms and visualization." onmouseover="changeText(this)" onmouseout="resetText(this)">
+                    <span class="card-text">Python</span>
+                </div>
+                <div class="card" data-original-text="Java" data-text="Java is a versatile language, and I am currently transitioning from Java to Golang." onmouseover="changeText(this)" onmouseout="resetText(this)">
+                    <span class="card-text">Java</span>
+                </div>
+                <div class="card" data-original-text="Gin" data-text="Gin is a web framework written in Go, and I'm learning it to build more web applications." onmouseover="changeText(this)" onmouseout="resetText(this)">
+                    <span class="card-text">Gin</span>
+                </div>
+                <div class="card" data-original-text="SQL" data-text="SQL is a foundational language used for learning databases." onmouseover="changeText(this)" onmouseout="resetText(this)">
+                    <span class="card-text">SQL</span>
+                </div>
+            </div>
+
+            <script>
+                function changeText(card) {
+                    // 修改文字为悬停时的内容
+                    card.querySelector('.card-text').innerText = card.getAttribute('data-text');
+                }
+
+                function resetText(card) {
+                    // 恢复原始文字
+                    card.querySelector('.card-text').innerText = card.getAttribute('data-original-text');
+                }
+            </script> 
+       
+        </section>
+        
+
+        
+
+        <!-- 项目展示 -->
+        <section id = "project" class="Project">
+            <h1>项目展示 (Project Showcase)</h1>
+            <h4>展示个人开发的前端与后端项目</h4>
+        </section>
+
+        <!-- 数据统计 -->
+        <section id="statistics" class="Statistics">
+            <h1>数据统计 (Statistics)</h1>
+            <h4>展示技术栈使用情况、网站访问量等数据</h4>
+            <img src="https://s2.loli.net/2024/09/17/yvn3cVbDILFw1NW.png" alt="数据统计">
+        </section>
+
+        <!-- 趣事分享 -->
+        <section id="fun" class="Fun">
+            <h1>趣事分享 (Fun Section)</h1>
+            <h4>展示用代码制作的有趣项目和创意</h4>
+        </section>
+
+        <!-- 书单 -->
+        <section id="book" class="Book">
+            <h1>书单 (Reading List)</h1>
+            <h4>展示个人读过的书籍，技术类与非技术类</h4>
+        </section>
+
+        <!-- 评论区 -->
+        <section id="comments" class="Comments">
+            <h1>评论区 (Comments)</h1>
+            <h4>评论区可以使用Markdown语法进行评论</h4>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <p>zhiyog © 2024</p>
+    </div>
 </body>
 </html>

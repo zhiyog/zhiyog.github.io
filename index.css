@@ -2,65 +2,352 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #2d2b34;
-    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(200deg, #e8e8e8, #a8edea, #d1fffc, #e8e8e8);
+    padding-top: 0px; /* 根据导航栏高度调整 */
+    color: #333;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0); /* 背景透明 */
+    backdrop-filter: blur(1.8px); /* 背景模糊效果 */
+    padding: 5px 0; /* 上下内边距 */
+    z-index: 1000; /* 保证在最上层 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.nav {
+    display: flex;
+    padding: 0px; /* 内边距 */
+    width: 100%;
+    display: flex; /* 设置横向的flex布局 */
+    justify-content: center; /* 图标在父容器中居中对齐 */
+    align-items: center; /* 图标垂直居中 */
+    gap: 2%; /* 调整图标之间的横向间距 */
+}
+
+.nav .logo {
+    display: flex; /* 设置横向的flex布局 */
+    justify-content: center; /* 图标在父容器中居中对齐 */
+    align-items: center; /* 图标垂直居中 */
+    padding: 0 0 0 5.2% ;
+}
+
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 22px;
+    padding: 0 1.2%;
+    display: flex;
+    align-items: center; /* 确保图标和文字垂直居中 */
+    flex-direction: row; /* 确保图标和文字水平排列 */
+    transition: color 0.3s ease;
+}
+
+.nav .logo .icon {
+    width: 28px; /* 设置图标的宽度 */
+    height: 28px; /* 设置图标的高度 */
+}
+
+.nav a:hover {
+    color: #1e90ff;
+}
+
+.nav .zhiyog-link {
+    font-size: 26px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.nav .zhiyog-link:hover {
+    color: #1e90ff; /* 鼠标悬停时亮蓝色 */
+    transform: scale(1.2); /* 放大效果 */
+}
+
+.nav .logo a{
+    padding: 10px;
+}
+
+.container {
+    padding: 30px;
+    max-width: 1300px;
+    background: linear-gradient(200deg, #e8e8e8, #a8edea, #d1fffc, #e8e8e8);
+    margin: 0px auto; /* 调整 margin 使内容距顶部更远 */
+    border-radius: 8px;
+    flex-direction: row;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.zhiyog {
+    display: flex;
+    padding: 30px 5%; /* 减少顶部 padding */
+    box-sizing: border-box; /* 保持内容盒模型一致 */
+    width: 100%; /* 保持容器宽度自适应 */
+    margin-top: 0px; /* 添加与导航栏的间距 */
+}
+
+.zhiyog p:hover,
+.zhiyog ul li:hover {
+    color: #000000; /* 悬停时改变文本颜色 */
+    transform: scale(1.1); /* 悬停时稍微放大 */
+    transition: all 0.3s ease-in-out;
+}
+
+.zhiyog ul {
+    border: 1px solid #ddd; /* 添加边框，区分容器 */
+
+    position: relative;
+    align-items: center;
+    text-align: right;
+    padding: 20px 40px; /* 减少 padding 以缩短高度 */
+    padding-left: 45px;
+    margin-top: 50px;
+    border-radius: 15px; /* 让边角圆润 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    width: 330px;
+    height: 400px; /* 设置固定高度（可根据需求调整） */
+}
+
+.zhiyog ul li {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+.zhiyog ul h1 {
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 50px; /* 增加标题和列表之间的间距 */
+}
+
+.water-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 150px auto;
+    padding-top: 120px;
+    padding-left: 250px;
+    width: 800px;
+}
+
+.water-box .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    padding: 35px 25px;
+    box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05),
+        25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05),
+        inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+    border-radius: 52% 48% 33% 67% / 38% 45% 55% 62%;
+    transition: 0.5s;
+}
+
+
+.water-box .content:hover {
+    border-radius: 50%;
+}
+
+.water-box .content p {
+    font-size: 20px;
+    line-height: 1.2;
+    color: #333;
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+.water-box .content::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 85px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.9;
+}
+
+.water-box .content::after {
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: 110px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.9;
+}
+
+.water-box .content p::before {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+.hello {
+    position: absolute;
+    right: -20px;
+    bottom: -10px;
+    width: 120px;
+    height: 120px;
+    background: #c61dff;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #e0e0e0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    background-size: cover;
-}
-.container {
-    background-color: rgba(0, 0, 0, 0.85);
-    padding: 50px;
-    background: url('./资源/index.png') ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 800px;
-    text-align: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-h1 {
-    font-size: 4.5em;
-    margin-bottom: 30px;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-    color: #b72e2e; /* 血红色，增加紧张感 */
-}
-.start-btn, .load-btn {
-    font-size: 1.5em;  /* 缩小字体 */
-    padding: 12px 25px;  /* 调整内边距 */
-    border: none;
-    border-radius: 8px;  /* 调整圆角 */
-    background-color: #5c5c5c;
-    color: white;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    width: 60%;  /* 缩小宽度 */
-    margin: 10px auto;  /* 调整上下间距 */
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: inset 10px 10px 15px rgba(190, 1, 254, 0.1),  /* 调整为和 welcome 一致 */
+        15px 25px 15px rgba(190, 1, 254, 0.1), 
+        15px 20px 25px rgba(190, 1, 254, 0.1),
+        inset -10px -10px 15px rgba(255, 255, 255, 0.5);
+    border-radius: 44% 56% 65% 35% / 57% 58% 42% 43%;
+    transition: 0.25s;  /* 添加一致的过渡效果 */
 }
 
-.start-btn:hover, .load-btn:hover {
-    background-color: #8b0000; /* 深红色悬停效果，显得更加悬疑 */
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(139, 0, 0, 0.6);
+.welcome {
+    position: absolute;
+    bottom: 150px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    background: #01b4ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: inset 10px 10px 15px rgba(1, 180, 255, 0.1), /* 和 hello 保持一致 */
+        15px 25px 15px rgba(1, 180, 255, 0.1),
+        15px 20px 25px rgba(1, 180, 255, 0.1),
+        inset -10px -10px 15px rgba(255, 255, 255, 0.5);
+    border-radius: 44% 56% 65% 35% / 57% 58% 42% 43%;
+    transition: 0.25s; /* 保持和 hello 一致的过渡效果 */
 }
-.load-btn {
-    background-color: #4a4a4a;
+
+.hello:hover, 
+.welcome:hover {
+    border-radius: 50%; /* 鼠标悬停时，变为圆形 */
 }
-.load-btn:hover {
-    background-color: #8b0000; /* 深红色悬停效果，显得更加悬疑 */
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(139, 0, 0, 0.6);
+
+.hello::before, 
+.welcome::before {
+    content: "";
+    position: absolute;
+    top: 15px; /* 统一调整位置 */
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.45;
 }
-.credits {
-    margin-top: 40px;
-    font-size: 1.2em;
-    color: #ffffff;
+
+.Code{
+    margin-bottom: 12%;
+}
+
+
+.card {
+    width: 100%;
+    height: 180px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.card::after {
+    display: none; /* 初始不显示 */
+    position: absolute;
+    top: 0; /* 根据需要调整位置 */
+    left: 0; /* 根据需要调整位置 */
+    font-size: 14px; /* 调整 data-text 的字体大小 */
+    color: rgb(0, 0, 0); /* 调整 data-text 的字体颜色 */
+    background-color: #ffffff; /* 设置背景颜色 */
+    padding: 10px; /* 增加内边距 */
+    border-radius: 10px; /* 圆角效果 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* 增加阴影效果 */
+    transition: opacity 0.2s ease; /* 过渡效果 */
+}
+
+.card:hover::after {
+    transform: scale(1.02);
+    background-color: #ddd;
+    display: block; /* 鼠标悬停时显示 */
+    opacity: 1; /* 设置可见性 */
+}
+
+.card-text {
+    font-size: 25px; /* 调整原始文本的字体大小 */
+    color: black; /* 调整原始文本的字体颜色 */
+    transition: color 0.2s ease; /* 过渡效果 */
+}
+
+.card:hover .card-text {
+    color: #1f1e1e; /* 悬停时的字体颜色 */
+}
+
+.Code .card2,
+.Code .card1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.Statistics img {
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    background-color: #f1f1f1;
+}
+
+.footer p {
+    color: #0c73da;
+    font-size: 14px;
+    margin: 10px 0;
 }
