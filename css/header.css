@@ -7,7 +7,6 @@
     height: 70px;
     line-height: 70px;
     background-color: rgba(255, 255, 255, 0); /* 背景透明 */
-    backdrop-filter: blur(1px); /* 背景模糊效果 */
     transition: top 0.5s ease; /* 添加平滑过渡效果 */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影 */
 }
