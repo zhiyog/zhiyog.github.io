@@ -12,4 +12,16 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // 确保使用正确的资源引用方式
+    assetsDir: "assets",
+    rollupOptions: {
+      output: {
+        // 确保JS文件使用.js扩展名
+        entryFileNames: 'assets/[name].[hash].js',
+        chunkFileNames: 'assets/[name].[hash].js',
+        assetFileNames: 'assets/[name].[hash].[ext]'
+      }
+    }
+  }
 })
