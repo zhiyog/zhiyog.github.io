@@ -7,18 +7,22 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { cn } from "@/lib/utils";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 
+// 导入静态资源
+import nowcoderSvg from "@/assets/nowcoder.svg";
+import githubSvg from "@/assets/github.svg";
+
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const Icons = {
   email: () => <MailIcon className="w-20" />,
   nowcoder: () => (
     <div>
-      <img src="src/assets/nowcoder.svg" alt="Icon" width="22" height="22" />
+      <img src={nowcoderSvg} alt="Icon" width="22" height="22" />
     </div>
   ),
   github: () => (
     <div>
-      <img src="src/assets/github.svg" alt="Icon" width="22" height="22" />
+      <img src={githubSvg} alt="Icon" width="22" height="22" />
     </div>
   ),
 };
