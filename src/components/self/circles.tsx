@@ -3,6 +3,13 @@ import ProfileCard from "./profileCard";
 import { BorderBeam } from "../magicui/border-beam";
 import { RetroGrid } from "../magicui/retro-grid";
 
+// 导入静态资源
+import nowcoderSvg from "@/assets/nowcoder.svg";
+import githubSvg from "@/assets/github.svg";
+import reactSvg from "@/assets/light_react.svg";
+import viteSvg from "@/assets/vite.svg";
+import headPicture from "@/assets/head_picture.png";
+
 export function OrbitingCirclesSelf() {
   return (
     <div>
@@ -26,22 +33,22 @@ export function OrbitingCirclesSelf() {
 const Icons = {
   nowcoder: () => (
     <div>
-      <img src="src/assets/nowcoder.svg" alt="Icon" width="100" height="100" />
+      <img src={nowcoderSvg} alt="Icon" width="100" height="100" />
     </div>
   ),
   gitHub: () => (
     <div>
-      <img src="src/assets/github.svg" alt="Icon" width="100" height="100" />
+      <img src={githubSvg} alt="Icon" width="100" height="100" />
     </div>
   ),
   react: () => (
     <div>
-      <img src="src/assets/light_react.svg" alt="Icon" width="100" height="100" />
+      <img src={reactSvg} alt="Icon" width="100" height="100" />
     </div>
   ),
   vite: () => (
     <div>
-      <img src="src/assets/vite.svg" alt="Icon" width="100" height="100" />
+      <img src={viteSvg} alt="Icon" width="100" height="100" />
     </div>
   ),
   head: () => (
@@ -57,7 +64,7 @@ const Icons = {
       }}
     >
       <img
-        src="src/assets/head_picture.png"
+        src={headPicture}
         width="200"
         height="200"
         style={{ borderRadius: "50%", objectFit: "cover" }}

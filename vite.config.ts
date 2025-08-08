@@ -22,6 +22,11 @@ export default defineConfig({
         chunkFileNames: 'assets/[name].[hash].js',
         assetFileNames: 'assets/[name].[hash].[ext]'
       }
-    }
-  }
+    },
+    // 确保静态资源被正确复制
+    copyPublicDir: true
+  },
+  // 添加静态资源处理
+  publicDir: "public",
+  assetsInclude: ["**/*.svg", "**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif"]
 })
