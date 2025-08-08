@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { motion, MotionStyle, Transition } from "motion/react";
+import { motion, type MotionStyle, type Transition } from "motion/react";
 
 interface BorderBeamProps {
   /**
@@ -76,7 +76,7 @@ export const BorderBeam = ({
         className={cn(
           "absolute aspect-square",
           "bg-gradient-to-l from-[var(--color-from)] via-[var(--color-to)] to-transparent",
-          className,
+          className
         )}
         style={
           {

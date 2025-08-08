@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 export function Navbar() {
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  const [, setIsExpanded] = React.useState(false);
 
   // Toggle dynamic effect on scroll or trigger
   const handleScroll = () => {

@@ -86,7 +86,7 @@ export function DockSelf() {
                       "size-12 rounded-full"
                     )}
                   >
-                    <social.icon className="size-4" />
+                    <social.icon />
                   </a>
                 </TooltipTrigger>
                 <TooltipContent>
