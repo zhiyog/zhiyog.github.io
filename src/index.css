@@ -73,7 +73,18 @@
   --animate-gradient: gradient 8s linear infinite;
   @keyframes gradient {
   to {
-    background-position: var(--bg-size, 300%) 0;}}}
+    background-position: var(--bg-size, 300%) 0;}}
+  --animate-line-shadow: line-shadow 15s linear infinite;
+  @keyframes line-shadow {
+  0% {
+    background-position: 0 0;}
+  100% {
+    background-position: 100% -100%;}}
+  @keyframes line-shadow {
+  0% {
+    background-position: 0 0;}
+  100% {
+    background-position: 100% -100%;}}}
 
 :root {
   --radius: 0.625rem;

@@ -13,7 +13,7 @@ import headPicture from "@/assets/head_picture.png";
 export function OrbitingCirclesSelf() {
   return (
     <div>
-      <div className="relative flex h-[860px] w-full flex-col items-center justify-center overflow-hidden mt-0 mb-20">
+      <div className="relative flex h-[860px] w-full flex-col items-center justify-center overflow-hidden mt-20 mb-20">
         <RetroGrid className="w-screen	 h-full" />
         <ProfileCard />
         <OrbitingCircles radius={280} iconSize={40} speed={2}>

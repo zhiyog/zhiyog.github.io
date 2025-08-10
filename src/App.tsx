@@ -7,8 +7,10 @@ import { MarqueeSelf } from "./components/self/marquee";
 function App() {
   return (
     <>
-      <div>
+      <div className="fixed top-0 left-0 right-0 m-auto z-50">
         <DockSelf />
+      </div>
+      <div>
         <OrbitingCirclesSelf />
         <MarqueeSelf />
         <LensSelf />
