@@ -11,9 +11,15 @@ function App() {
         <DockSelf />
       </div>
       <div>
-        <OrbitingCirclesSelf />
-        <MarqueeSelf />
-        <LensSelf />
+        <section id="zhiyog">
+          <OrbitingCirclesSelf />
+        </section>
+        <section id="code">
+          <MarqueeSelf />
+        </section>
+        <section id="fun">
+          <LensSelf />
+        </section>
       </div>
     </>
   );

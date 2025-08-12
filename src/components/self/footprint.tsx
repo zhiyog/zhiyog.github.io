@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -9,29 +8,22 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Lens } from "@/components/magicui/lens";
+import mapPic from "@/assets/map.png";
 
 export function LensSelf() {
   return (
-    <Card className="relative max-w-md shadow-none">
+    <Card className="relative shadow-none">
       <CardHeader>
-        <Lens zoomFactor={2} lensSize={150} isStatic={false} ariaLabel="Zoom Area">
-          <img
-            src="https://images.unsplash.com/photo-1736606355698-5efdb410fe93?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="image placeholder"
-            width={500}
-            height={500}
-          />
-        </Lens>
+        <CardTitle className="text-2xl">Footprint</CardTitle>
+        <CardDescription>Go further on the map, I am a travel beginner</CardDescription>
       </CardHeader>
       <CardContent>
-        <CardTitle className="text-2xl">Your next camp</CardTitle>
-        <CardDescription>
-          See our latest and best camp destinations all across the five continents of the globe.
-        </CardDescription>
+        <Lens zoomFactor={2} lensSize={150} isStatic={false} ariaLabel="Zoom Area">
+          <img src={mapPic} alt="map" width={800} height={800} className="mx-auto" />
+        </Lens>
       </CardContent>
       <CardFooter className="space-x-4">
-        <Button>Let&apos;s go</Button>
-        <Button variant="secondary">Another time</Button>
+        <p>2025 @ Gaode Map</p>
       </CardFooter>
     </Card>
   );

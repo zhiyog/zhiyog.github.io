@@ -31,23 +31,23 @@ const DATA = {
   navbar: [
     { href: "#zhiyog", label: "zhiyog" },
     { href: "#code", label: "code" },
-    { href: "#blog", label: "blog" },
+    { href: "#fun", label: "fun" },
   ],
   contact: {
     social: {
       gitHub: {
         name: "GitHub",
-        url: "#",
+        url: "https://github.com/zhiyog",
         icon: Icons.github,
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:3550245033@qq.com",
         icon: Icons.email,
       },
       nowcoder: {
         name: "Nowcoder",
-        url: "#",
+        url: "https://www.nowcoder.com/users/347676512",
         icon: Icons.nowcoder,
       },
     },
